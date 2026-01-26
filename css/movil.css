@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+body {
+    color: #000000;
+    background: #eef0ff;
+}
+
+header {
+    background-color: rgb(109, 109, 214);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+section#TopHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#Sociales{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: white;
+    padding: px;
+}
+
+section#Sociales a {
+    color: rgb(255, 255, 255);
+    margin: 10px;
+    text-decoration: none;
+    justify-content: space-around;
+}
+
+section#Contactame {
+    display: flex;
+    justify-content: center;
+    color: white;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top:5px;
+}
+
+section#Contactame a {
+    color: rgb(255, 255, 255);
+    margin: 10px;
+    text-decoration: none;
+}
+
+section#Headermain {
+    display: flex;
+    flex-direction: row;
+    padding-top:10px;
+
+}
+
+section#Headermain figure {
+    display: flex;
+    height: 50px;
+    width: auto;
+}
+
+section#Headermain h1 {
+    color: white;
+    font-size: 30px;
+    margin-left: 10px;
+
+}
+
+article {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 10px;
+    padding: 10px;
+}
+
+article h2 {
+    font-size: 18px;
+    margin: 0;
+    flex: 1 1 30%; /* El flex esta con el graw-shirink y basis  */ 
+    background: #a7abcb;
+    padding: 10px;
+}
+
+article h3 {
+    font-size: 16px;
+    margin: 0;
+    flex: 1 1 30%; /* El flex esta con el graw-shirink y basis  */ 
+    background: #a7abcb;
+    padding: 10px;
+}
+
+article button { 
+    background: #a7abcb;
+    border-radius: 6px;
+    margin-top: 10px;
+    padding: 10px 10px;
+    flex: 0 0 auto;
+    align-self: flex-start;
+}
+
+article nav {
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 4px;
+}
+
+article nav a {
+    color: #672871;
+    text-decoration: none;
+    padding: 10px 10px;
+    display: flex;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section figure img {
+    width: 100%;
+    height: auto;
+}
+
+section article p {
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 100%;
+}
