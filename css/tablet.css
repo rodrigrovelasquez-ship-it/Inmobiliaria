@@ -1,0 +1,168 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	background: #eef0ff;
+}
+
+/*
+	HEADER EN TABLET CON FLEX
+	Objetivo visual (como en la imagen):
+	1) Fila superior: contacto a la izquierda y redes a la derecha.
+	2) Fila inferior: logo/título a la izquierda, datos al centro y menú en columna a la derecha.
+*/
+header {
+	display: flex;
+	gap: 10px;
+	flex-direction: column;
+	background-color: rgb(109, 109, 214);
+	padding-bottom: 10px;
+}
+
+/* Bloque superior (contacto + redes + logo/título) */
+header section#TopHeader {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 10px;
+	flex-wrap: wrap;
+}
+
+/* Contacto (izquierda, fila 1) */
+header section#Contactame {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	flex: 1 1 50%;
+	order: 1;
+	justify-content: flex-start;
+}
+
+header section#Sociales {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	justify-content: flex-end;
+	flex: 1 1 50%;
+	order: 2;
+}
+
+header section#Headermain {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	flex: 1 1 100%;
+	order: 3;
+}
+
+header article {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 20px;
+	flex-wrap: nowrap;
+	background: #cfd3ee;
+	padding: 10px;
+}
+
+header article h2 {
+	flex: 0 1 45%;
+	margin: 0;
+}
+
+header article h3 {
+	flex: 0 1 45%;
+	margin: 0;
+}
+
+header article nav {
+	display: flex;
+	flex-direction: row;
+	gap: 6px;
+	align-items: center;
+	flex: 0 1 auto;
+	flex-wrap: wrap;
+}
+
+/* Ocultar el botón */
+header article button {
+	display: none;
+}
+
+main{
+	display: flex;
+	flex-direction: row;
+}
+
+
+main section#Contenido{
+	flex: 3 1 70%;
+	padding: 20px;
+}
+
+main section h4 {
+	font-size: 24px;
+	margin: 10px 20px;
+}
+
+
+
+/* Cartas de las viviendas del .json*/
+#listado-viviendas {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 12px;
+	padding: 10px 20px 20px;
+	align-items: stretch;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	background: #ffffff;
+	border: 1px solid #d6d6d6;
+	border-radius: 6px;
+	overflow: hidden;
+	flex: 1 1 calc(50% - 12px);
+}
+
+.card figure {
+	display: flex;
+	order: 2;
+}
+
+.card figure img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.card .titulo {
+	display: flex;
+	padding: 10px;
+	font-weight: 600;
+	order: 3;
+}
+
+.card aside {
+	display: flex;
+	justify-content: space-between;
+	padding: 8px 10px;
+	background: #a7abcb;
+	font-weight: 600;
+	order: 1;
+}
+
+.card aside .ref,
+.card aside .precio {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	font-style: normal;
+}

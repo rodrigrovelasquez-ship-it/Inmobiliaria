@@ -23,7 +23,7 @@
                 
                 <section id="Contactame">
                     <a href="tel:+34614714578" class="">+34 614 71 45 78 </a>
-                    <a href="" class="fa-solid fa-right-to-bracket">Login</a>
+                    <a href=""  id="login" class="fa-solid fa-right-to-bracket">Login</a>
                 </section>
 
                 <section id="Headermain">
@@ -64,29 +64,49 @@
         </header>
 
         <main>
-            <Section>
-                <article>
-                    <h1>
-                        Viviendas en Mojarca
-                    </h1>
+            <section>
+                <h4>Viviendas en Mojácar</h4>
+                <div id="listado-viviendas">
+                    <a id="ref"></a>
+                    <a id="precio"></a>
 
-                    <figure>
-                        <img src="/LA CASA DE TU SUEÑOS/logo/Apartamento 1.jpg" alt="Vivienda en Mojacar 2">
-                    </figure>
-
-                    <p id="Titulo">
-                        Apartamento Venta Los Delfines Majorca
-                    </p>
-
-                    <aside>
-                        <i class="Ref"> Ref:3511</i>
-                        <i class="Precio">9.000 € </i>
-                    </aside> 
-            
-
-                </article>
-            </Section>
+                </div>
+            </section>
         </main>
 
+        <script>
+            // 1) Guardamos el contenedor donde se pintarán las viviendas
+            const contenedor = document.getElementById("listado-viviendas");
+
+            // 2) Leemos el archivo JSON con fetch (ruta relativa a este HTML)
+            fetch("./Data/casas.json")
+                // 3) Convertimos la respuesta a JSON (array de objetos)
+                .then((respuesta) => respuesta.json())
+                // 4) Con los datos, generamos el HTML de las tarjetas
+                .then((casas) => {
+                    contenedor.innerHTML = casas
+                        .map(
+                            (casa) => `
+                                <article class="card">
+                                    <figure>
+                                        <img src="${casa.imagen}" alt="${casa.titulo}">
+                                    </figure>
+                                    <p class="titulo">${casa.titulo}</p>
+                                    <aside>
+                                        <i class="ref">Ref:${casa.ref}</i>
+                                        <i class="precio">${casa.precio}</i>
+                                    </aside>
+                                </article>
+                            `
+                        )
+                        .join(""); // 5) Unimos todas las tarjetas y las insertamos
+                })
+                // 6) Si hay un error, mostramos un mensaje y lo registramos
+                .catch((error) => {
+                    contenedor.innerHTML = "";
+                    console.error(error);
+                });
+        </script>
     </body>
+
 

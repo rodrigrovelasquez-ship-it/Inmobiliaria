@@ -1,0 +1,177 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	background: #eef0ff;
+	color: #000000;
+}
+
+header {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	background-color: rgb(109, 109, 214);
+	padding-bottom: 10px;
+}
+
+header section#TopHeader {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 20px;
+	padding: 10px 20px 0;
+	flex-wrap: wrap;
+}
+
+header section#Headermain {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	flex: 1 1 auto;
+	order: 1;
+}
+
+header section#Headermain figure {
+	display: flex;
+	height: 60px;
+	width: auto;
+}
+
+header section#Headermain h1 {
+	font-size: 28px;
+	color: #ffffff;
+}
+
+header section#Contactame {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	flex: 0 1 auto;
+	color: #ffffff;
+	order: 2;
+	margin-left: auto;
+}
+
+header section#Contactame a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+header section#Sociales {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	flex: 0 1 auto;
+	order: 3;
+}
+
+header section#Sociales a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+header article {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 20px;
+	padding: 10px 20px;
+	background: #cfd3ee;
+}
+
+header article h2,
+header article h3 {
+	background: #a7abcb;
+	padding: 10px;
+	margin: 0;
+	flex: 0 1 280px;
+}
+
+header article button {
+	display: none;
+}
+
+header article nav {
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+	align-items: center;
+	justify-content: center;
+	flex: 1 1 auto;
+}
+
+header article nav a {
+	text-decoration: none;
+	color: #672871;
+	padding: 10px 12px;
+	background: transparent;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+}
+
+main section h4 {
+	font-size: 26px;
+	margin: 14px 20px;
+}
+
+#listado-viviendas {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 16px;
+	padding: 10px 20px 20px;
+	align-items: stretch;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	background: #ffffff;
+	border: 1px solid #d6d6d6;
+	border-radius: 6px;
+	overflow: hidden;
+	flex: 1 1 calc(33.333% - 16px);
+	min-width: 240px;
+}
+
+.card figure {
+	display: flex;
+	order: 2;
+}
+
+.card figure img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.card .titulo {
+	display: flex;
+	padding: 10px;
+	font-weight: 600;
+	order: 3;
+}
+
+.card aside {
+	display: flex;
+	justify-content: space-between;
+	padding: 8px 10px;
+	background: #a7abcb;
+	font-weight: 600;
+	order: 1;
+}
+
+.card aside .ref,
+.card aside .precio {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	font-style: normal;
+}

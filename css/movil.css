@@ -1,143 +1,202 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; 
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box; 
 }
 body {
-    color: #000000;
-    background: #eef0ff;
+	color: #000000;
+	background: #eef0ff;
+	display: flex;
+	flex-direction: column;
+
 }
 
 header {
-    background-color: rgb(109, 109, 214);
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+	background-color: rgb(109, 109, 214);
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	gap: 10px;
+	padding-bottom: 10px;
 
 }
 
 section#TopHeader {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 6px;
 }
 
 #Sociales{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    color: white;
-    padding: px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	color: white;
+	padding: 6px 0;
 }
 
 section#Sociales a {
-    color: rgb(255, 255, 255);
-    margin: 10px;
-    text-decoration: none;
-    justify-content: space-around;
+	color: rgb(255, 255, 255);
+	margin: 10px;
+	text-decoration: none;
+	justify-content: space-around;
 }
 
 section#Contactame {
-    display: flex;
-    justify-content: center;
-    color: white;
-    flex-direction: row;
-    justify-content: space-around;
-    padding-top:5px;
+	display: flex;
+	justify-content: center;
+	color: white;
+	flex-direction: row;
+	justify-content: space-around;
+	padding-top:5px;
+	flex-wrap: wrap;
 }
 
 section#Contactame a {
-    color: rgb(255, 255, 255);
-    margin: 10px;
-    text-decoration: none;
+	color: rgb(255, 255, 255);
+	margin: 10px;
+	text-decoration: none;
 }
 
 section#Headermain {
-    display: flex;
-    flex-direction: row;
-    padding-top:10px;
+	display: flex;
+	flex-direction: row;
+	padding-top:10px;
+	align-items: center;
 
 }
 
 section#Headermain figure {
-    display: flex;
-    height: 50px;
-    width: auto;
+	display: flex;
+	height: 50px;
+	width: auto;
 }
 
 section#Headermain h1 {
-    color: white;
-    font-size: 30px;
-    margin-left: 10px;
+	color: white;
+	font-size: 30px;
+	margin-left: 10px;
 
 }
 
 article {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
-    gap: 10px;
-    padding: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: stretch;
+	gap: 10px;
+	padding: 10px;
+	background: #cfd3ee;
 }
 
 article h2 {
-    font-size: 18px;
-    margin: 0;
-    flex: 1 1 30%; /* El flex esta con el graw-shirink y basis  */ 
-    background: #a7abcb;
-    padding: 10px;
+	font-size: 18px;
+	margin: 0;
+	flex: 1 1 30%; /* El flex esta con el graw-shirink y basis  */ 
+	background: #a7abcb;
+	padding: 10px;
 }
 
 article h3 {
-    font-size: 16px;
-    margin: 0;
-    flex: 1 1 30%; /* El flex esta con el graw-shirink y basis  */ 
-    background: #a7abcb;
-    padding: 10px;
+	font-size: 16px;
+	margin: 0;
+	flex: 1 1 30%; /* El flex esta con el graw-shirink y basis  */ 
+	background: #a7abcb;
+	padding: 10px;
 }
 
 article button { 
-    background: #a7abcb;
-    border-radius: 6px;
-    margin-top: 10px;
-    padding: 10px 10px;
-    flex: 0 0 auto;
-    align-self: flex-start;
+	background: #a7abcb;
+	border-radius: 6px;
+	margin-top: 10px;
+	padding: 10px 10px;
+	flex: 0 0 auto;
+	align-self: flex-start;
 }
 
 article nav {
-    flex-basis: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    margin-top: 4px;
+	flex-basis: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	margin-top: 4px;
 }
 
 article nav a {
-    color: #672871;
-    text-decoration: none;
-    padding: 10px 10px;
-    display: flex;
+	color: #672871;
+	text-decoration: none;
+	padding: 10px 10px;
+	display: flex;
 }
 
 main {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+	display: flex;
+	flex-direction: column;
 }
 
 section figure img {
-    width: 100%;
-    height: auto;
+	width: 100%;
+	height: auto;
+}
+main section h4 {
+	font-size: 24px;
+	margin: 10px;
+	text-align: start;
 }
 
-section article p {
-    display: flex;
-    flex-direction: row;
-    flex: 1 1 100%;
+#listado-viviendas {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	padding: 10px;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	background: #ffffff;
+	border: 1px solid #d6d6d6;
+	border-radius: 6px;
+	overflow: hidden;
+}
+
+.card figure {
+	display: flex;
+	order: 2;
+}
+
+.card figure img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.card .titulo {
+	display: flex;
+	padding: 10px;
+	font-weight: 600;
+	order: 3;
+}
+
+.card aside {
+	display: flex;
+	justify-content: space-between;
+	padding: 8px 10px;
+	background: #a7abcb;
+	font-style: normal;
+	font-weight: 600;
+	order: 1;
+}
+
+.card aside .ref,
+.card aside .precio {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	font-style: normal;
 }
